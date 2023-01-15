@@ -1,0 +1,16 @@
+##################################################################
+# Serial Port Monitor for Windows, Linux, Solaris
+# (c) rs@rolf-schroedter.de http://www.rolf-schroedter.de/moni
+##################################################################
+# $Id: LICENSE.txt 1131 2008-02-02 17:13:01Z rolf $
+##################################################################
+ 
+This program library is free software.
+You can use, redistribute it and/or modify it for your own needs.
+ 
+This software is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+
+The included BWidget library falls under the BSD License, 
+see https://sourceforge.net/projects/tcllib/

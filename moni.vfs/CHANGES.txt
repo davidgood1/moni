@@ -1,0 +1,99 @@
+##################################################################
+# Serial Port Monitor for Windows, Linux, Solaris
+# (c) rs@rolf-schroedter.de http://www.rolf-schroedter.de/moni
+##################################################################
+# $Id: CHANGES.txt 1503 2011-11-18 15:02:22Z schroedt $
+##################################################################
+
+ChangeLog:
+
+November 18, 2011 - Moni version 2.42
+	- Getting COM ports froom windows registry fails if there are no COM ports registered
+	- Catch the registry scan, use OM1..4 if it fails
+
+July 11, 2011 - Moni version 2.41
+	- Remember SendFile & S-Record directory selection
+	- SendFile directory defaults to PWD
+
+Apr 21, 2010 - Added higher (non-standard baud rates) in a simple plugin
+
+Apr 21, 2010 - Moni version 2.40
+	- Input callback will not be called, when RS232 reception is stopped
+
+Apr 19, 2010 - Moni version 2.40
+	- Added input/output callbacks
+	- Added MyMacros Sample Echo Server
+	- Added data history to MyMacros.tcl
+	- MyMacros-Echo-Server: Fixed delay'ed character echo, mangling the character order
+
+Dec 21, 2009 - Moni version 2.36
+	- Added tty::symbol callback for special keys (cursors)
+	- New tty::input to correctly process multiple BACKSPACE characters.
+
+Nov 03, 2008 - Moni version 2.35
+	- Retrieve available serial ports from Windows registry (Thanks to Rüdiger Härtel <r_haertel@gmx.de>)
+
+Feb 02, 2008 - Center all toplevel windows on top of the main window
+    - Uses Tk's internal function tk::PlaceWindow (hint by r_haertel@gmx.de)
+
+Feb 02, 2008 - Moni version 2.34
+    - Added command-line options to load a config file & connect/disconnect serial port
+    - Updated eMail address in source files
+    - Disconnect doesn't destroy text data
+    - Distribute Moni together with plugins: tty.tcl, S-Records.tcl, MyMacros.tcl 
+
+May 02, 2006 - Moni version 2.33
+    User defined TTY callbacks may be defined as plugin
+    - Support external callback ::tty::key processing key presses in TTY (ascii) text widget
+    - Support external callback ::tty::input processing incoming characters (terminal emulation)
+
+January 26, 2006
+    - Updated "About Moni" and "About Tcl/Tk" information.
+
+January 26, 2006
+    - Added "Edit/Copy all" menu entry - copying complete Ascii/Hex window to clipboard.
+    - Fixed file logging to flush file when logging is disabled.
+    - Fixed character "echo" not written to log-file.
+
+December 06, 2005
+    - Added Disconnect / Connect button and menu (follwing an idea of matthewf@spyder-fonix.com)
+
+March 11, 2005
+    - SendFile: Added Milliseconds delay between two characters
+
+January 19, 2005
+    - Added S-Record dump data command
+
+January 18, 2005
+    - Added support for plugins
+    - Added S-Record loader plugin
+
+November 1, 2004
+    - Focus text widget after search
+    - Add <return> binding to search entry
+
+October 28, 2004
+    - Use TCL STARKITS instead of ActiveState's TclDevKit
+      http://www.equi4.com/starkit.html
+    - Added RCS tags to all files
+
+October 27, 2004
+    - Added a simple Text and Hex search 
+      Note: A simple search using Tcl's text-widget search
+            Therefore it doesn't find patterns over newlines
+            
+October 2, 2002, version 2.10:
+    - Supports Windows, Linux, Solaris 
+    - Tcl 8.4 with handshake support
+    - Included image of the "original Moni" (guinea pig)
+    - Changes in BWidgets 1.4 (removed -label from SpinBox & ComboBox)
+    - Minor bug fixesJuly 6, 2001:
+    - Make MONI run under Linux
+
+Dec 6, 1999:
+    - Added copy & Paste support
+
+Sept, 1999:
+    - Creation
+    - Supports Tcl 8.2 for Windows using the WinCom package
+

@@ -1,0 +1,133 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+
+  <meta name="GENERATOR"
+ content="Mozilla/4.78 [en] (Windows NT 5.0; U) [Netscape]">
+  <title>Moni: A Serial port monitor</title>
+</head>
+  <body>
+
+<h2> Moni: A serial port monitor written in Tcl/Tk</h2>
+
+<hr width="100%">Version 2.34: February 2008<br>
+   <a href="#changes">Changes</a> / <a href="#download">Download</a>
+
+<p><b><i>Moni</i></b> (<a href="#moni">who is moni ?</a>) is a raw serial port terminal
+ program written in plain <a href="http://dev.scriptics.com">Tcl</a> running
+ under Windows, Linux &amp;  Solaris. <br>
+     It requires Tcl8.4 or later (enhanced serial support). <br>
+  </p>
+
+<b><i>Moni</i></b> opens a connection to a serial port and displays incoming data
+   in ASCII and/or Hexadecimal. <br>
+     It supports:
+<ul> <li>  Serial configuration including handshake options </li>
+     <li>Sending of ASCII and hexadecimal charaters to the port </li>
+     <li>Send the contents of a file with repetition </li>
+     <li>Logging of all incoming data</li>
+     <li>Manual setting and monitoring of handshake lines (since Moni 2.20)
+   </li>
+</ul>
+
+<p><b><i>Moni</i></b> uses the fantastic <a
+ href="http://sourceforge.net/projects/tcllib/">BWidgets</a> toolkit. </p>
+
+<p>Screenshot of the TTY (ASCII) display and serial port configuration: <br>
+     <a href="moni-screen-1.jpg"><img src="moni-screen-1-small.jpg"
+ height="308" width="431">
+     </a> </p>
+
+<p>Screenshot of hexadecimal display and send file tool: <br>
+     <a href="moni-screen-2.jpg"><img src="moni-screen-2-small.jpg"
+ height="308" width="431">
+     </a> <br>
+     </p>
+
+<p>Please feel free to use, redistribute and modify <b><i>Moni</i></b> for
+  your own needs. </p>
+
+<h3><a name="download"></a>Download Moni version 2.34:</h3>
+<ul>
+  <li>Starkit distribution: <a href="moni234.kit">moni234.kit (0.4 MBytes)</a>   </li>
+  <ul>
+       <li>The Moni234 <a href="http://www.equi4.com/starkit/sdx.html">starkit</a> runs under Windows and Linux</li>
+       <li>The Tcl sources may be extracted from the <a href="http://www.equi4.com/starkit/sdx.html">starkit</a> using the <a href="http://www.equi4.com/starkit/sdx.html">SDX </a>tool</li>
+  </ul>
+  <li>Starkit including sample plugins: <a href="moni234+plugins.zip">moni234+plugins.zip  (0.4 MBytes)</a></li>
+  <ul>
+        <li>Moni 2.34 supports plugins (external Tcl scripts extending Moni)</li>
+        <li>Three sample plugings are provided with Moni:</li>
+        <ul>
+            <li>tty.tcl - A simple user callback for incoming and outgoing characters</li>
+            <li>S-Records.tcl - A Motorola S-Record loader I am using quite frequently for embedded systems</li>
+            <li>MyMacros.tcl - Another sample to show how to write your own plugins</li>
+        </ul>
+  </ul>
+  <li>Complete Moni sources including starkit for Windows: <a href="moni234source.zip">moni234source.zip (2.3 MBytes) </a></li>
+</ul>
+
+<p> <br>
+Older <b><i>Moni </i></b>versions: <br>
+<b><u>Moni 2.20:</u></b><br>
+</p>
+<ul>
+     <li>Sources:&nbsp;  <a href="moni220.zip">moni220.zip</a> or
+         <a href="moni220.tgz">moni220.tgz (~0.4 MBytes) </a></li>
+     <li>Binaries produced using TclDevKit / Starkit:</li>
+     <ul>
+         <li>Windows:&nbsp; <a href="moni220.exe">moni220.exe (1.1 MBytes)</a></li>
+         <li>Linux/ix86: <a href="moni220.linux">moni220.linux (1.2 MBytes)</a></li>
+     </ul>
+</ul>
+
+<h3><a name="changes"></a>Changes:</h3>
+<b><u>Moni 2.34:</u></b>
+<ul>
+     <li>Added support for plugins (first plugin: S-Record loader)</li>
+     <li>Added Disconnect / Connect button and menu (follwing an idea of Matthew Fatheree)</li>
+     <li>Added "Edit/Copy all" menu entry - copying complete Ascii/Hex window to clipboard.</li>
+     <li>User defined TTY callbacks may be defined as plugin</li>
+     <ul>
+         <li>Support external callback ::tty::key processing key presses in TTY (ascii) text widget</li>
+         <li>Support external callback ::tty::input processing incoming characters (terminal emulation)</li>
+     </ul>
+     <li>Added command-line options to load a config file & connect/disconnect serial port</li>
+     <li>Bug fixes:</li>
+     <ul>
+         <li>Fixed file logging to flush file when logging is disabled.</li>
+         <li>Fixed character "echo" not written to log-file.</li>
+         <li>Disconnect doesn't destroy text data.</li>
+     </ul>
+
+</ul>
+   <b><u>Moni 2.20:</u></b>
+<ul>
+         <li>Added manual setting and monitoring of handshake lines </li>
+         <li>Added ballon help for status window fields</li>
+</ul>
+<b><u>Moni 2.10:</u></b>
+<ul>
+     <li>Switch to Tcl 8.4 (extended serial port support) </li>
+     <li>Linux platform support<br>
+  </li>
+     <li>Binaries release using TclDevKit / Starkit<br>
+     </li>
+</ul>
+
+<p>  <a name="moni"></a><u><b>Who is Moni:</b></u><br>
+  </p>
+
+<p><a href="moni_orig.jpg"><img src="moni_icon128.gif" height="128"
+ width="128" align="texttop">
+     </a> The program is dedicated to our sweet "Moni" (Aug 1995 - Aug 1999)
+  <br>
+  </p>
+
+<hr width="100%">Contact:&nbsp; <img src="/contact.gif" align="absmiddle">
+ <br>
+</body>
+</html>
